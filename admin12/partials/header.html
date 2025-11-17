@@ -1,0 +1,98 @@
+<header class="header">
+  <div class="logo">Logo</div>
+
+  <!-- 🔍 Thanh tìm kiếm -->
+  <form id="searchForm" class="search-bar">
+    <input type="text" id="searchInput" placeholder="Thanh tìm kiếm..." />
+  </form>
+
+  <!-- 👤 Phần phải -->
+  <div class="header-right">
+    <button class="notify-btn">🔔 Thông báo</button>
+    <div class="user-info">
+      <span>👤 Xin chào, admin</span>
+    </div>
+  </div>
+
+  <!-- 🔧 Script -->
+  <script>
+  document.getElementById('searchForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+
+    // 📂 Thư mục chứa các file trang con
+    const basePath = '/php/bvte/admin12/pages/';
+    let target = '';
+
+    // 🧭 Ánh xạ từ khóa sang file PHP thật
+    if (keyword.includes('bài') || keyword.includes('đăng')) {
+      target = basePath + 'baidang.php';
+    } else if (keyword.includes('tư') || keyword.includes('vấn')) {
+      target = basePath + 'admin_tuvan.php';
+    } else if (keyword.includes('lịch') || keyword.includes('hẹn')) {
+      target = basePath + 'admin_lichhen.php';
+    } else if (keyword.includes('chuyên') || keyword.includes('gia')) {
+      target = basePath + 'chuyengia.php';
+    } else if (keyword.includes('người') || keyword.includes('dùng')) {
+      target = basePath + 'nguoidung.php';
+    } else if (keyword.includes('tài') || keyword.includes('chính')) {
+      target = basePath + 'taichinh.php';
+    } else if (keyword.includes('bình') || keyword.includes('luận')) {
+      target = basePath + 'admin_binhluan.php';
+    } else if (keyword.includes('dashboard') || keyword.includes('trang chủ')) {
+      target = '/php/bvte/admin.php'; // trang chính
+    }
+
+    // 🔗 Chuyển hướng
+    if (target) {
+      window.location.href = target;
+    } else {
+      alert('Không tìm thấy chức năng phù hợp.');
+    }
+  });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$('#notifyBtn').on('click', function() {
+  const box = $('#notifyBox');
+  if (box.is(':visible')) {
+    box.hide();
+    return;
+  }
+
+  $.get('/php/bvte/admin12/BE/lay_thong_bao.php', function(res) {
+    if (!res.success) {
+      alert(res.message || 'Lỗi tải thông báo');
+      return;
+    }
+
+    let html = '<div class="notify-list">';
+    if (res.data.length === 0) {
+      html += '<p>Không có thông báo mới.</p>';
+    } else {
+      res.data.forEach(item => {
+        html += `
+          <div class="notify-item">
+            <strong>${item.tieu_de}</strong><br>
+            <small>${item.noi_dung}</small><br>
+            <em>${item.ngay_gui}</em>
+          </div>
+        `;
+      });
+      html += '<button id="markAllRead" class="btn btn-sm btn-secondary mt-2">Đánh dấu đã đọc</button>';
+    }
+    html += '</div>';
+    box.html(html).show();
+  }, 'json');
+});
+
+// Đánh dấu tất cả đã xem
+$(document).on('click', '#markAllRead', function() {
+  $.get('/php/bvte/admin12/BE/danh_dau_thong_bao.php', function() {
+    $('#notifyBox').hide();
+    alert('Đã đánh dấu tất cả thông báo là đã đọc');
+  });
+});
+</script>
+
+</header>

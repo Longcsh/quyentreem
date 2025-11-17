@@ -1,0 +1,387 @@
+/* 👨‍⚕️ Quản lý chuyên gia - Giao diện quản trị nâng cao */
+
+:root {
+  --main-blue: #3a7bd5;
+  --blue-dark: #2a66b5;
+  --light-blue: #eaf2ff;
+  --white: #ffffff;
+  --gray-text: #333;
+  --gray-light: #f5f7fb;
+  --shadow: 0 4px 16px rgba(0,0,0,0.08);
+  --danger: #e74c3c;
+  --success: #2ecc71;
+  --warning: #f39c12;
+}
+
+/* 🌐 Toàn trang */
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--gray-light);
+  color: var(--gray-text);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* ============================ */
+/* 🔹 Header */
+header {
+  background: linear-gradient(90deg, var(--main-blue), #6dd5fa);
+  color: var(--white);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-btn, .add-btn {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 8px 14px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.1s;
+}
+
+.add-btn {
+  background: var(--success);
+  border: none;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.add-btn:hover {
+  background: #27ae60;
+  transform: scale(1.05);
+}
+
+/* ============================ */
+/* 📦 Container & Actions */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.actions input,
+.actions select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.actions input:focus,
+.actions select:focus {
+  outline: none;
+  border-color: var(--main-blue);
+  box-shadow: 0 0 0 2px rgba(58,123,213,0.2);
+}
+/* ============================ */
+/* ⚙️ Thanh công cụ tìm kiếm + lọc + thêm */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--white);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.actions-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.actions-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.actions input,
+.actions select {
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.actions input:focus,
+.actions select:focus {
+  outline: none;
+  border-color: var(--main-blue);
+  box-shadow: 0 0 0 2px rgba(58,123,213,0.15);
+}
+
+/* Nút thêm chuyên gia trong thanh actions */
+.actions .add-btn {
+  background: var(--success);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.actions .add-btn:hover {
+  background: #27ae60;
+  transform: scale(1.05);
+}
+
+.action-btn.delete {
+  color: var(--danger);
+}
+
+.action-btn.delete:hover {
+  color: #c0392b;
+  transform: scale(1.25);
+}
+
+
+/* ============================ */
+/* 📊 Bảng chuyên gia */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: var(--light-blue);
+  font-weight: 600;
+  color: #333;
+}
+
+tr:nth-child(even) td {
+  background: #fafcff;
+}
+
+tr:hover td {
+  background: #f0f6ff;
+}
+
+/* ============================ */
+/* 🟢 Badge trạng thái */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge-success {
+  background: rgba(46, 204, 113, 0.15);
+  color: var(--success);
+}
+
+.badge-secondary {
+  background: rgba(231, 76, 60, 0.15);
+  color: var(--danger);
+}
+
+/* ============================ */
+/* ⚙️ Nút hành động */
+.action-btn {
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 18px;
+  margin: 0 4px;
+  transition: transform 0.1s, color 0.2s;
+  color: var(--main-blue);
+}
+
+.action-btn:hover {
+  transform: scale(1.25);
+  color: var(--blue-dark);
+}
+
+/* ============================ */
+/* 💬 Toast thông báo */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--main-blue);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.3s ease-out;
+  z-index: 99;
+}
+
+.toast.success { background: var(--success); }
+.toast.error { background: var(--danger); }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================ */
+/* 🪟 Modal thêm chuyên gia */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: var(--shadow);
+  animation: slideDown 0.25s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--main-blue);
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  border-color: var(--main-blue);
+  box-shadow: 0 0 0 2px rgba(58,123,213,0.15);
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.modal-content .btn-submit {
+  background: var(--success);
+  color: #fff;
+}
+
+.modal-content .btn-submit:hover {
+  background: #27ae60;
+}
+
+.modal-content .btn-cancel {
+  background: #bbb;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.modal-content .btn-cancel:hover {
+  background: #999;
+}
+
+/* ============================ */
+/* ⏳ Loading */
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .actions-left {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions-right {
+    justify-content: center;
+  }
+
+  .actions .add-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

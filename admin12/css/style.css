@@ -1,0 +1,218 @@
+/* 🌐 RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f5f8ff;
+  color: #2b2b2b;
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* 🔹 HEADER */
+/* ============================= */
+.header {
+  background: linear-gradient(90deg, #3a8dde, #1e88e5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
+  height: 70px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header .logo {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+/* 🔍 Thanh tìm kiếm */
+.header .search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header .search-bar input {
+  width: 50%;
+  max-width: 450px;
+  padding: 9px 16px;
+  border-radius: 24px;
+  border: 1px solid #d0e4fb;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.header .search-bar input:focus {
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.4);
+  border-color: #90caf9;
+}
+
+/* 👤 Phần phải của header */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.notify-btn {
+  background: #fff;
+  color: #1976d2;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(25, 118, 210, 0.25);
+}
+
+.notify-btn:hover {
+  background: #1976d2;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.user-info {
+  color: #fff;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 6px 14px;
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+}
+
+/* ============================= */
+/* 🧭 SIDEBAR */
+/* ============================= */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: calc(100vh - 70px);
+  width: 240px;
+  background: linear-gradient(180deg, #1976d2, #1565c0);
+  padding-top: 20px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.06);
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #e3f2fd;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  transform: translateX(5px);
+  backdrop-filter: blur(6px);
+}
+
+/* ============================= */
+/* 📄 MAIN CONTENT */
+/* ============================= */
+main {
+  margin-left: 250px;
+  margin-top: 85px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 85px);
+  text-align: center;
+  background-color: #f7faff;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+main h2 {
+  color: #1976d2;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+main p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* 🖱️ SCROLLBAR */
+/* ============================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #90caf9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #42a5f5;
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE */
+/* ============================= */
+@media (max-width: 992px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .header .search-bar {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  main {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 20px;
+  }
+}

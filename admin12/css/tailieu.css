@@ -1,0 +1,171 @@
+/* ================================
+   📘 CSS: Quản lý Tài liệu (Admin)
+   ================================ */
+
+body {
+  background-color: #f4f6f9;
+  font-family: "Segoe UI", sans-serif;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/* === Bố cục chung === */
+.container {
+  max-width: 1200px;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* === Header và nút === */
+.header-btn {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-back {
+  background-color: #6c757d;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 6px 14px;
+  transition: 0.25s;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* === Bộ lọc === */
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.filter-bar select {
+  height: 36px;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+}
+
+.filter-bar select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+/* === Bảng dữ liệu === */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th,
+.table tbody td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table thead th {
+  background-color: #e9ecef;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+/* === Nút thao tác nhỏ === */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 0.4rem;
+}
+
+.btn-sm.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: #000;
+}
+
+.btn-sm.btn-warning:hover {
+  background-color: #ffca2c;
+}
+
+.btn-sm.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+}
+
+.btn-sm.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* === Modal chỉnh sửa === */
+.modal-content {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+/* === Input & Form === */
+.form-control,
+.form-select {
+  border-radius: 0.4rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+/* === Tạo cảm giác gọn gàng cho card === */
+.card-header {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.card-body {
+  background-color: #fff;
+}
+
+/* === Responsive nhẹ === */
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar select {
+    width: 100%;
+  }
+
+  .header-btn {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn-back {
+    width: 100%;
+  }
+}
