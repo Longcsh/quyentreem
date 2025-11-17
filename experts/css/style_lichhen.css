@@ -1,0 +1,169 @@
+/* ===============================
+   CSS TRANG LỊCH HẸN CHUYÊN GIA (CHUẨN CUỐI)
+   =============================== */
+
+body {
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------
+   BỐ CỤC CHUNG
+-------------------------------- */
+.main-content {
+  margin-left: 240px; /* chừa chỗ cho sidebar */
+  padding: 60px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* -------------------------------
+   KHỐI CHÍNH CHỨA NỘI DUNG
+-------------------------------- */
+.lichhen-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------------------
+   TIÊU ĐỀ
+-------------------------------- */
+h2 {
+  text-align: center;
+  color: #2f75b5;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* -------------------------------
+   BẢNG LỊCH HẸN
+-------------------------------- */
+table, .table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+thead, .table thead {
+  background: #2f75b5;
+  color: white;
+}
+
+th, td, .table th, .table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+tr:hover, .table tr:hover {
+  background: transparent;
+}
+
+/* -------------------------------
+   TRẠNG THÁI (BADGES)
+-------------------------------- */
+.status {
+  font-weight: 600;
+  padding: 6px 16px;          /* tăng chiều ngang */
+  border-radius: 6px;
+  display: inline-block;
+  text-transform: none;
+  white-space: nowrap;        /* không xuống dòng nữa */
+  min-width: 90px;            /* giữ độ rộng tối thiểu để chữ 1 hàng */
+  text-align: center;         /* căn giữa chữ trong ô */
+}
+
+
+.status.success {
+  background: #e3f9e8;
+  color: #0a7b33;
+}
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+.status.info {
+  background: #e3f0ff;
+  color: #004b91;
+}
+.status.neutral {
+  background: #f2f2f2;
+  color: #555;
+}
+
+/* -------------------------------
+   NÚT HÀNH ĐỘNG
+-------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 6px 14px;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-accept {
+  background: #2ecc71;
+}
+.btn-accept:hover {
+  background: #25a25a;
+}
+
+.btn-reject {
+  background: #e74c3c;
+}
+.btn-reject:hover {
+  background: #c0392b;
+}
+
+.inline-form {
+  display: inline-block;
+  margin: 0;
+}
+
+.done {
+  color: #555;
+  font-style: italic;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+/* -------------------------------
+   RESPONSIVE
+-------------------------------- */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .lichhen-container {
+    padding: 20px;
+  }
+  th, td {
+    font-size: 13px;
+  }
+}

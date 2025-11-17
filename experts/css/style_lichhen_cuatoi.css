@@ -1,0 +1,105 @@
+/* ===============================
+   CSS TRANG "LỊCH CỦA TÔI"
+   =============================== */
+
+body {
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+  margin: 0;
+  padding: 0;
+}
+
+/* Bố cục chính */
+.main-content {
+  margin-left: 240px;
+  padding: 60px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Khối trắng chính */
+.lichcuatoi-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Tiêu đề */
+h2 {
+  text-align: center;
+  color: #2f75b5;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Bảng */
+.lichcuatoi-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.lichcuatoi-table th {
+  background: #2f75b5;
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.lichcuatoi-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+.lichcuatoi-table tr:hover {
+  background: transparent;
+}
+
+/* Trạng thái */
+.status {
+  display: inline-block;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 6px;
+  white-space: nowrap;
+  text-align: center;
+  min-width: 90px;
+}
+
+.status.success {
+  background: #e3f9e8;
+  color: #0a7b33;
+}
+
+/* Thông báo rỗng */
+.empty {
+  text-align: center;
+  color: #777;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .lichcuatoi-container {
+    padding: 20px;
+  }
+  .lichcuatoi-table th,
+  .lichcuatoi-table td {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,109 @@
+/* ===============================
+   CSS TRANG ĐĂNG TÀI LIỆU
+   =============================== */
+
+body {
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout chính */
+.main-content {
+  margin-left: 240px;
+  padding: 60px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Khối chính */
+.upload-container {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  color: #2f75b5;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Thông báo */
+.alert.success {
+  background: #e3f9e8;
+  color: #0a7b33;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.upload-form .form-group {
+  margin-bottom: 18px;
+}
+
+.upload-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.upload-form input[type="text"],
+.upload-form textarea,
+.upload-form select,
+.upload-form input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+  transition: 0.2s;
+}
+
+.upload-form input:focus,
+.upload-form textarea:focus,
+.upload-form select:focus {
+  border-color: #2f75b5;
+  box-shadow: 0 0 0 2px rgba(47, 117, 181, 0.15);
+}
+
+/* Nút */
+.btn-submit {
+  background: #2f75b5;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background: #1d5894;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .upload-container {
+    padding: 20px;
+  }
+}

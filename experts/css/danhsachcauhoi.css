@@ -1,0 +1,116 @@
+/* ===============================
+   CSS TRANG DANH SÁCH CÂU HỎI CHUYÊN GIA
+   =============================== */
+body {
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+  background: #f5f9ff;
+  margin: 0;
+  padding: 0;
+}
+.main-content {
+  margin-left: 240px; /* chừa chỗ sidebar */
+  padding: 60px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.question-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  color: #2f75b5;
+  margin-bottom: 25px;
+}
+
+/* Bảng câu hỏi */
+.question-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.question-table th {
+  background: #2f75b5;
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.question-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+.question-table tr:hover {
+  background: #f0f7ff;
+}
+
+/* Trạng thái */
+.status {
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.status.success {
+  color: #0a7b33;
+  background: #e3f9e8;
+}
+.status.pending {
+  color: #b33a3a;
+  background: #ffeaea;
+}
+
+/* Nút hành động */
+.btn {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #2f75b5;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #1d5894;
+}
+
+.done {
+  color: #555;
+  font-style: italic;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .question-container {
+    padding: 20px;
+  }
+  .question-table th, .question-table td {
+    font-size: 13px;
+  }
+}

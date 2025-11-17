@@ -1,0 +1,149 @@
+/* ======================================
+   GIAO DIỆN TRANG CHỦ CHUYÊN GIA
+   ====================================== */
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(180deg, #eaf3ff 0%, #ffffff 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Khu vực nội dung chính --- */
+.expert-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+
+/* --- Khối card chào mừng --- */
+.welcome-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 50px 60px;
+  text-align: center;
+  max-width: 600px;
+  animation: fadeIn 0.7s ease-out;
+}
+
+.welcome-card .logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #4292e2;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.welcome-card .logo:hover {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.welcome-card h1 {
+  color: #2f6ec4;
+  font-size: 30px;
+  margin: 15px 0 10px;
+}
+
+.welcome-card p {
+  color: #333;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.welcome-card .subtitle {
+  color: #555;
+  font-size: 15px;
+  margin: 10px 0 25px;
+}
+
+/* --- Nút đăng xuất --- */
+.btn-logout {
+  display: inline-block;
+  background: #2f6ec4;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-logout:hover {
+  background: #1e56a0;
+  transform: translateY(-2px);
+}
+
+/* --- Hiệu ứng xuất hiện --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive (khi có sidebar cố định) --- */
+@media (min-width: 992px) {
+  .expert-home {
+    margin-left: 250px; /* để chừa chỗ cho sidebar nếu có */
+    justify-content: flex-start;
+  }
+}
+
+/* Vùng chính giữa */
+.main-content {
+  margin-left: 240px; /* để không bị sidebar che */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #f6f9ff 0%, #eaf1fb 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Thẻ giữa màn hình */
+.welcome-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  max-width: 600px;
+  width: 90%;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Hiệu ứng mở mượt */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Avatar trong thẻ */
+.welcome-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px rgba(66,146,226,0.5);
+}
+
+/* Tiêu đề lớn */
+.welcome-card h1 {
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Dòng chào */
+.welcome-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Tên người dùng in đậm */
+.welcome-card strong {
+  color: #111;
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "Chuyên gia có người yêu chưa?",
+    "date": "2025-09-27",
+    "answered": true,
+    "answerText": "Chưa có bạn nhé 😅",
+    "filePath": "uploads/example.pdf"
+  },
+  {
+    "id": 2,
+    "question": "Làm sao để cải thiện kỹ năng giao tiếp?",
+    "date": "2025-09-28",
+    "answered": false
+  },
+  {
+    "id": 3,
+    "question": "Có thể chia sẻ tài liệu phòng chống bạo hành không?",
+    "date": "2025-09-29",
+    "answered": false
+  }
+]

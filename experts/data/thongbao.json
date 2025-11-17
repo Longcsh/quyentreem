@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Có lịch hẹn mới được xác nhận",
+    "date": "2025-09-28",
+    "seen": false
+  },
+  {
+    "id": 2,
+    "title": "Khách hàng gửi câu hỏi mới",
+    "date": "2025-09-27",
+    "seen": false
+  },
+  {
+    "id": 3,
+    "title": "Bạn đã cập nhật hồ sơ cá nhân",
+    "date": "2025-09-20",
+    "seen": true
+  }
+]

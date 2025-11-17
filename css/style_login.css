@@ -1,0 +1,139 @@
+/* ============================= */
+/* GIAO DIỆN ĐĂNG NHẬP CHUẨN MỚI */
+/* ============================= */
+body {
+  background: linear-gradient(145deg, #f5f9ff, #eef3fa);
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset nhỏ giúp các phần tử trong khung tính toán kích thước chuẩn */
+.login-box, 
+.login-box * {
+  box-sizing: border-box;
+}
+
+.login-box {
+  max-width: 420px;
+  margin: 80px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 40px 45px;
+  transition: 0.3s;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.login-box:hover {
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #1C4E8E;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* Input + select */
+.login-box select,
+.login-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 12px;
+  border: 1px solid #ccd3e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.25s;
+  background: #fff;
+  display: block;
+}
+
+.login-box select:focus,
+.login-box input:focus {
+  border-color: #31B0D5;
+  box-shadow: 0 0 0 3px rgba(49,176,213,0.15);
+  outline: none;
+}
+
+/* Icon trong input */
+.login-box .input-group {
+  position: relative;
+}
+.login-box .input-group i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 15px;
+}
+.login-box .input-group input {
+  padding-left: 40px;
+}
+
+/* Liên kết quên mật khẩu */
+.login-box .forgot {
+  text-align: center;
+  margin-top: 12px;
+}
+.login-box .forgot a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #1C4E8E;
+  font-weight: 500;
+}
+.login-box .forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Nút đăng nhập */
+.login-box .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+.login-box button {
+  border: none;
+  color: white;
+  padding: 11px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+.login-box .btn-login {
+  background-color: #31B0D5;
+}
+.login-box .btn-home {
+  background-color: #D9534F;
+}
+.login-box .btn-login:hover {
+  background-color: #2390b3;
+  transform: translateY(-2px);
+}
+.login-box .btn-home:hover {
+  background-color: #b64643;
+  transform: translateY(-2px);
+}
+
+/* Thông báo lỗi */
+.login-box .error {
+  color: red;
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Hiệu ứng fade-in nhẹ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

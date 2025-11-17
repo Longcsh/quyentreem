@@ -1,0 +1,446 @@
+.post-content-wrapper {
+  background: #fff;
+  padding: 24px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  line-height: 1.7;
+  font-size: 16px;
+  color: #333;
+}
+
+.post-content-wrapper .share-buttons {
+  margin-top: 20px;
+  background: #f9fafc;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border-left: 4px solid #1C4E8E;
+}
+
+.post-content-wrapper .share-buttons span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Nút chia sẻ có hiệu ứng nổi */
+.post-content-wrapper .share-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transform: translateY(0);
+}
+
+/* Hiệu ứng nổi khi hover */
+.post-content-wrapper .share-buttons .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Facebook xanh */
+.post-content-wrapper .share-buttons .facebook {
+  background: #1877f2;
+}
+.post-content-wrapper .share-buttons .facebook:hover {
+  background: #0d5ec2;
+  box-shadow: 0 6px 12px rgba(24, 119, 242, 0.4); /* ánh sáng xanh */
+}
+
+/* Google đỏ */
+.post-content-wrapper .share-buttons .google {
+  background: #db4437;
+}
+.post-content-wrapper .share-buttons .google:hover {
+  background: #b73225;
+  box-shadow: 0 6px 12px rgba(219, 68, 55, 0.4); /* ánh sáng đỏ */
+}
+
+/* Khi nhấn giữ nút */
+.post-content-wrapper .share-buttons .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ==================== Bài viết liên quan ==================== */
+.post-content-wrapper .related-posts {
+  margin-top: 30px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.post-content-wrapper .related-posts h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #1C4E8E;
+}
+
+.post-content-wrapper .related-posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-content-wrapper .related-posts li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.post-content-wrapper .related-posts li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1C4E8E;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.post-content-wrapper .related-posts a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.post-content-wrapper .related-posts a:hover {
+  color: #1C4E8E;
+}
+/* ==================== Nút tải xuống (màu xám) ==================== */
+.post-content-wrapper .share-buttons .download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #777;             /* xám trung tính */
+  margin-top: 12px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hiệu ứng nổi khi hover */
+.post-content-wrapper .share-buttons .download:hover {
+  background: #555;              /* xám đậm hơn khi hover */
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(85, 85, 85, 0.4); /* ánh sáng xám mềm */
+}
+
+/* Nhấn giữ */
+.post-content-wrapper .share-buttons .download:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* =========================================
+   CSS GỐC CHO CÁC TRANG NỘI DUNG
+   (Quyền trẻ em, Chống bạo hành, Giáo dục)
+   ========================================= */
+
+.page-content {
+  background: #f5f7fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ===== TIÊU ĐỀ CHÍNH ===== */
+.page-content h2 {
+  color: #1C4E8E;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== DANH SÁCH TÀI LIỆU ===== */
+.page-content .doc-item {
+  background: #fff;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-content .doc-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-content .doc-item h3 {
+  color: #1C4E8E;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.page-content .doc-item p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.page-content .doc-item a {
+  display: inline-block;
+  background: linear-gradient(90deg, #31F4F4, #1C4E8E);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.page-content .doc-item a:hover {
+  background: linear-gradient(90deg, #1C4E8E, #31F4F4);
+}
+
+/* ===== PHẦN NÚT XEM BÌNH LUẬN TRONG TỪNG TÀI LIỆU ===== */
+.page-content .doc-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.page-content .doc-actions .view-doc {
+  background: linear-gradient(90deg, #8BC34A, #2ECC71);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.page-content .doc-actions .view-doc:hover {
+  background: linear-gradient(90deg, #2ECC71, #8BC34A);
+}
+
+.page-content .comment-toggle-btn {
+  background: #f1f5ff;
+  border: 1px solid #1C4E8E;
+  color: #1C4E8E;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.page-content .comment-toggle-btn:hover {
+  background: #1C4E8E;
+  color: #fff;
+}
+
+/* ===== KHUNG CHƯA CÓ TÀI LIỆU ===== */
+.page-content .no-docs {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  max-width: 720px;
+  margin: 30px auto;
+  border: 1px dashed #1C4E8E;
+}
+
+.page-content .no-docs p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1C4E8E;
+  margin-bottom: 20px;
+}
+
+.page-content .doc-placeholder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.page-content .doc-placeholder {
+  background: #f9fafc;
+  border-radius: 10px;
+  padding: 18px 20px;
+  border-left: 4px solid #31F4F4;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-content .doc-placeholder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120px;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0)
+  );
+  animation: shimmer-slide 2s infinite;
+}
+
+@keyframes shimmer-slide {
+  0% { left: -120px; }
+  100% { left: 100%; }
+}
+
+.page-content .ph-title,
+.page-content .ph-desc,
+.page-content .ph-btn {
+  background: #e3e8ef;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.page-content .ph-title {
+  height: 18px;
+  width: 60%;
+}
+
+.page-content .ph-desc {
+  height: 14px;
+  width: 90%;
+}
+
+.page-content .ph-btn {
+  height: 30px;
+  width: 120px;
+  background: #d8dee9;
+  border-radius: 20px;
+}
+
+/* ===== BÌNH LUẬN ===== */
+.page-content .comment-section {
+  margin-top: 15px;
+  background: #f9fafc;
+  border-radius: 10px;
+  padding: 15px;
+  border-left: 4px solid #1C4E8E;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: none;
+}
+
+.page-content .comment-section h4 {
+  color: #1C4E8E;
+  font-size: 18px;
+  margin-top: 10px;
+  border-bottom: 2px solid #31F4F4;
+  padding-bottom: 6px;
+}
+
+.page-content .comment-section textarea,
+.page-content .comment-section input[type="text"],
+.page-content .comment-section input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.page-content .comment-section textarea:focus,
+.page-content .comment-section input:focus {
+  border-color: #1C4E8E;
+  outline: none;
+}
+
+.page-content .comment-section button {
+  background: linear-gradient(90deg, #31F4F4, #1C4E8E);
+  border: none;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.page-content .comment-section button:hover {
+  background: linear-gradient(90deg, #1C4E8E, #31F4F4);
+}
+
+.page-content .comment-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.page-content .comment-section li {
+  background: #f9fafc;
+  padding: 12px 15px;
+  border-left: 4px solid #1C4E8E;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.page-content .comment-section li strong {
+  color: #1C4E8E;
+  font-weight: 600;
+}
+
+.page-content .comment-section li p {
+  margin: 4px 0 0 0;
+  font-size: 15px;
+}
+
+/* ===== PHÂN TRANG ===== */
+.page-content .pagination {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.page-content .pagination a {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #1C4E8E;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.page-content .pagination a:hover {
+  background: #1C4E8E;
+  color: #fff;
+}
+
+.page-content .pagination .active {
+  background: #1C4E8E;
+  color: #fff;
+  font-weight: bold;
+}
+/* Bỏ hiệu ứng nút cho liên kết trong phần bình luận */
+.page-content .comment-section a {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #007bff !important;
+  padding: 0 !important;
+  display: inline !important;
+  text-decoration: underline;
+  border-radius: 0 !important;
+}
+
+.page-content .comment-section a:hover {
+  color: #0056b3 !important;
+  text-decoration: underline;
+}

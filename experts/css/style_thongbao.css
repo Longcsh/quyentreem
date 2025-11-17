@@ -1,0 +1,90 @@
+/* ===========================
+   THÔNG BÁO CHUYÊN GIA
+=========================== */
+
+.notification-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.notification-container h2 {
+  color: #2f75b5;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.notice {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  background: #f9fbff;
+  border-left: 5px solid #2f75b5;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+
+.notice.unread {
+  background: #e9f1ff;
+  border-left-color: #ff9800;
+}
+
+.notice:hover {
+  background: #f0f7ff;
+}
+
+.notice .title {
+  font-weight: 600;
+  color: #2f75b5;
+  margin-bottom: 4px;
+}
+
+.notice .content {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.notice .time {
+  color: #888;
+  font-size: 13px;
+  text-align: right;
+}
+
+.empty {
+  text-align: center;
+  padding: 30px;
+  color: #999;
+  font-size: 16px;
+}
+
+.btn-mark {
+  display: block;
+  width: 220px;
+  margin: 0 auto 20px auto;
+  background: #2f75b5;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-mark:hover {
+  background: #1d5894;
+  transform: scale(1.03);
+}
+
+/* Hiệu ứng vào */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

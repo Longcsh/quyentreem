@@ -1,0 +1,118 @@
+/* ===============================
+   CSS TRANG ĐỔI MẬT KHẨU CHUYÊN GIA
+   =============================== */
+body {
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+  background: #f5f9ff;
+  margin: 0;
+  padding: 0;
+}
+/* Cấu trúc nền và bố cục */
+.main-content {
+  margin-left: 240px; /* chừa chỗ sidebar */
+  padding: 60px;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Khung đổi mật khẩu */
+.change-password-container {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 35px 40px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+.change-password-container h2 {
+  text-align: center;
+  color: #2f75b5;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.change-password-container label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+.change-password-container input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+.change-password-container input:focus {
+  border-color: #2f75b5;
+  box-shadow: 0 0 5px rgba(47,117,181,0.3);
+  outline: none;
+}
+.change-password-container button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: #2f75b5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.change-password-container button:hover {
+  background: #1d5894;
+  transform: scale(1.02);
+}
+
+/* Popup thông báo */
+.popup {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: top 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 1000;
+}
+.popup.show {
+  top: 50px;
+  opacity: 1;
+}
+.popup.success {
+  border-left: 6px solid #2ecc71;
+}
+.popup.error {
+  border-left: 6px solid #e74c3c;
+}
+#popup-icon {
+  font-size: 38px;
+}
+#popup-message {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .change-password-container {
+    width: 100%;
+  }
+}

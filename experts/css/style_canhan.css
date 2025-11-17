@@ -1,0 +1,84 @@
+/* ==========================
+   TRANG HỒ SƠ CHUYÊN GIA
+========================== */
+
+.profile-card {
+  width: 700px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 35px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.profile-card h2 {
+  text-align: center;
+  color: #2f75b5;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.25s;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: #2f75b5;
+  box-shadow: 0 0 5px rgba(47,117,181,0.3);
+  outline: none;
+}
+
+input[readonly], select[disabled] {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.btn-save, .btn-back {
+  display: inline-block;
+  width: 100%;
+  background-color: #2f75b5;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.btn-save:hover, .btn-back:hover {
+  background-color: #1d5894;
+  transform: scale(1.02);
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.success { color: #2f75b5; }
+.error { color: #c0392b; }

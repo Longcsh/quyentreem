@@ -1,0 +1,131 @@
+
+/* 🌐 Font chữ tổng thể */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f6f8fc;
+  line-height: 1.6;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f6f8fc;
+}
+
+/* Sidebar */
+.layout aside {
+  width: 230px;
+  background: linear-gradient(180deg, #2b6cb0, #4299e1);
+  color: #fff;
+}
+
+/* Nội dung chính */
+.main-content {
+  flex: 1;
+  padding: 40px 60px;
+}
+
+/* Khung trả lời */
+.answer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.answer-container h2 {
+  text-align: center;
+  color: #2b6cb0;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.answer-container .chuyenmon {
+  text-align: center;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.question-box {
+  background: #f9fbff;
+  border-left: 4px solid #4a90e2;
+  padding: 18px 24px;
+  margin: 20px 0;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.image-box {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-box img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.answer-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+  min-height: 120px;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.answer-form textarea:focus {
+  border-color: #2b6cb0;
+  outline: none;
+}
+
+.answer-form button {
+  background-color: #2b6cb0;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.answer-form button:hover {
+  background-color: #1e4e8c;
+}
+
+.back-link {
+  display: inline-block;
+  color: #2b6cb0;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+.back-btn {
+  display: inline-block;
+  border: 2px solid #2b6cb0;
+  color: #2b6cb0;
+  background: transparent;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 20px;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #2b6cb0;
+  color: #fff;
+}

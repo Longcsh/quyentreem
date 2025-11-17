@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "postId": 1,
+    "user": "Nguyễn Văn A",
+    "text": "Bài viết rất hay, cảm ơn chuyên gia!",
+    "date": "2025-09-26",
+    "likes": 2,
+    "reply": "Cảm ơn bạn đã quan tâm!"
+  },
+  {
+    "id": 2,
+    "postId": 1,
+    "user": "Trần Thị B",
+    "text": "Mình muốn hỏi thêm về chế độ dinh dưỡng.",
+    "date": "2025-09-27",
+    "likes": 0,
+    "reply": ""
+  },
+  {
+    "id": 3,
+    "postId": 2,
+    "user": "Lê Văn C",
+    "text": "Bài viết hữu ích, mong có thêm ví dụ.",
+    "date": "2025-09-28",
+    "likes": 1,
+    "reply": ""
+  }
+]

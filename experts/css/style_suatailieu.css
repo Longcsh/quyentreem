@@ -1,0 +1,121 @@
+/* FORM SỬA TÀI LIỆU  */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6fc;
+  margin: 0;
+  padding: 40px;}
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.edit-container {
+  background: #fff;
+  padding: 35px 45px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+  position: relative;
+  top: -40px;
+}
+
+h2 {
+  color: #2f75b5;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.edit-form label {
+  font-weight: 600;
+  color: #2f75b5;
+  font-size: 15px;
+}
+
+.edit-form input[type="text"],
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #cfd9e8;
+  background: #fff;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus,
+.edit-form select:focus {
+  outline: none;
+  border-color: #2f75b5;
+  box-shadow: 0 0 6px rgba(47, 117, 181, 0.25);
+}
+
+/* Ảnh và file */
+.preview-img {
+  display: block;
+  width: 200px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.download-link {
+  display: inline-block;
+  margin: 6px 0;
+  color: #2f75b5;
+  text-decoration: none;
+  font-weight: 500;
+}
+.download-link:hover {
+  text-decoration: underline;
+}
+
+/* Nút */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-save {
+  background: #2f75b5;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.btn-save:hover {
+  background: #1d5890;
+}
+
+.btn-cancel {
+  background: #f0f6ff;
+  color: #2f75b5;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+.btn-cancel:hover {
+  background: #d9e9ff;
+}

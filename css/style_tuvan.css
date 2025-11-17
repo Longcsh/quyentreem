@@ -1,0 +1,429 @@
+/* ===============================================
+   💬 TRANG HỎI CHUYÊN GIA (đồng bộ màu Quyền Trẻ Em)
+   =============================================== */
+.tu-van {
+  max-width: 720px;
+  margin: 50px auto;
+  background: linear-gradient(145deg, #ffffff, #f6fbff);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 40px 45px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+}
+
+/* 🔹 Tiêu đề (đồng màu với QUYỀN TRẺ EM) */
+.tu-van h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #1C4E8E;         /* 💙 màu giống trong hình bạn gửi */
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Thông báo */
+.tu-van p[style*="green"],
+.tu-van p[style*="red"] {
+  display: block;
+  margin: 12px auto;
+  max-width: 90%;
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+/* 🧾 FORM */
+.tu-van form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.tu-van label {
+  font-weight: 600;
+  color: #1C4E8E;
+}
+
+.tu-van textarea,
+.tu-van input[type="file"] {
+  border: 1px solid #cdd9e8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+
+.tu-van textarea:focus,
+.tu-van input[type="file"]:focus {
+  border-color: #1C4E8E;
+  box-shadow: 0 0 0 3px rgba(28, 78, 142, 0.2);
+  outline: none;
+}
+
+/* 🎨 Nút gửi (chuyển từ tím → xanh lam nhạt hơn tiêu đề một chút) */
+.tu-van button {
+  background: linear-gradient(90deg, #1C4E8E, #31A9F4);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(28, 78, 142, 0.25);
+  transition: all 0.3s ease;
+}
+
+.tu-van button:hover {
+  background: linear-gradient(90deg, #163a6b, #1b8ed4);
+  transform: translateY(-2px);
+}
+
+/* 📋 Danh sách câu hỏi */
+.tu-van ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.tu-van ul li {
+  background: #f9fcff;
+  border-left: 5px solid #1C4E8E;
+  border-radius: 12px;
+  padding: 15px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tu-van ul li:hover {
+  transform: translateX(3px);
+  background: #eef7ff;
+}
+
+.tu-van ul li strong {
+  color: #1C4E8E;
+}
+
+.tu-van ul li em {
+  display: block;
+  color: #888;
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+/* 🖼️ Ảnh minh họa */
+.anh-minh-hoa {
+  margin-top: 10px;
+  max-width: 220px;
+  border-radius: 10px;
+  border: 2px solid #c6e6ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.anh-minh-hoa:hover {
+  transform: scale(1.05);
+}
+
+/* 📎 Link tài liệu */
+.tai-lieu-link {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #1C4E8E;
+  font-weight: 600;
+  border-bottom: 1px dashed transparent;
+  transition: all 0.3s;
+}
+.tai-lieu-link:hover {
+  border-color: #1C4E8E;
+  color: #0f2b5a;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .tu-van { padding: 25px; }
+  .tu-van h2 { font-size: 20px; }
+  .tu-van button { font-size: 14px; }
+}
+
+
+/* ===============================================
+   📩 TRANG TRẢ LỜI CỦA TÔI – đồng bộ màu xanh chủ đạo
+   =============================================== */
+body {
+  background: #f6f9fc;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.traloi-section {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  padding: 40px 45px;
+}
+
+/* 🔹 Tiêu đề */
+.traloi-section h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #1C4E8E;      /* màu giống "QUYỀN TRẺ EM" */
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Danh sách câu hỏi */
+.traloi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.traloi-item {
+  background: #f9fcff;
+  border-left: 5px solid #1C4E8E;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.traloi-item:hover {
+  transform: translateX(3px);
+  background: #eef6ff;
+}
+
+.traloi-item .question strong {
+  color: #1C4E8E;
+}
+
+.traloi-item .date {
+  color: #777;
+  font-size: 13px;
+}
+
+.answer-box {
+  margin-top: 8px;
+  background: #e9f4ff;
+  border: 1px solid #b8d8ff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #0f3057;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.answer-box strong {
+  color: #1C4E8E;
+}
+
+.pending {
+  color: #555;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .traloi-section {
+    padding: 25px;
+  }
+  .traloi-section h2 {
+    font-size: 22px;
+  }
+}
+
+
+.datlich {
+  max-width: 720px;
+  margin: 50px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 40px 45px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+}
+
+.datlich h2 {
+  text-align: center;
+  color: #1C4E8E;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.form-datlich {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-datlich label {
+  font-weight: 600;
+  color: #1C4E8E;
+}
+
+.form-datlich select,
+.form-datlich input[type="datetime-local"],
+.form-datlich textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccd8e6;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-datlich select:focus,
+.form-datlich input:focus,
+.form-datlich textarea:focus {
+  border-color: #1C4E8E;
+  box-shadow: 0 0 0 3px rgba(28,78,142,0.2);
+  outline: none;
+}
+
+.form-datlich button {
+  margin-top: 12px;
+  background: linear-gradient(90deg, #1C4E8E, #31A9F4);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(28, 78, 142, 0.25);
+  transition: all 0.3s ease;
+}
+.form-datlich button:hover {
+  background: linear-gradient(90deg, #163b6b, #1C4E8E);
+  transform: translateY(-2px);
+}
+
+.message {
+  color: green;
+  text-align: center;
+  font-weight: 600;
+}
+
+.lichhen-item {
+  background: #f9fcff;
+  border-left: 5px solid #1C4E8E;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.lichhen-item strong { color: #1C4E8E; }
+
+.empty {
+  text-align: center;
+  color: #777;
+}
+
+
+
+/* ===============================================
+   📅 TRANG LỊCH HẸN CỦA TÔI
+   =============================================== */
+.lichhen-toi {
+  max-width: 720px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  padding: 40px 45px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+}
+
+/* Tiêu đề */
+.lichhen-toi h2 {
+  text-align: center;
+  color: #1C4E8E;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Danh sách */
+.lichhen-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lichhen-item {
+  background: #f9fcff;
+  border-left: 5px solid #1C4E8E;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.lichhen-item:hover {
+  transform: translateX(3px);
+  background: #eef6ff;
+}
+
+.lichhen-item strong {
+  color: #1C4E8E;
+}
+
+.lichhen-item em {
+  display: block;
+  color: #777;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Trạng thái */
+.status {
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+}
+
+.status.cho_xac_nhan { background: #f8b84a; }    /* vàng */
+.status.da_xac_nhan { background: #28a745; }    /* xanh lá */
+.status.huy { background: #dc3545; }            /* đỏ */
+.status.hoan_thanh { background: #1C4E8E; }    /* xanh lam */
+
+/* Khi trống */
+.empty {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .lichhen-toi {
+    padding: 25px;
+  }
+  .lichhen-toi h2 {
+    font-size: 22px;
+  }
+}

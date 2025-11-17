@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Tài liệu an toàn học đường",
+    "description": "T..............",
+    "file": "uploads/AI.pdf",
+    "date": "2025-09-27"
+  },
+  {
+    "id": 2,
+    "title": "Quyền trẻ em",
+    "description": ".......................",
+    "file": "uploads/DSA.pptx",
+    "date": "2025-09-28"
+  }
+]

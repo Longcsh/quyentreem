@@ -1,0 +1,90 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background: linear-gradient(180deg, #4292e2, #2f6ec4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 20px;
+  z-index: 999;
+  overflow-y: auto; /* để cuộn nếu danh sách dài */
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sidebar .logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* Menu chính */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li {
+  position: relative;
+}
+
+/* Liên kết chính */
+.sidebar ul li > a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.sidebar ul li > a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+/* Menu con */
+.sidebar ul li ul {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+
+.sidebar ul li ul li a {
+  display: block;
+  padding: 10px 35px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar ul li ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Khi mở */
+.sidebar ul li.open ul {
+  max-height: 500px;
+  padding: 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar { width: 200px; }
+}
+/* ===== NỘI DUNG CHÍNH ===== */
+.main-content {
+  margin-left: 240px; /* chừa chỗ sidebar */
+  padding: 40px 60px;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+  min-height: 100vh;
+  position: relative;   /* ✅ tránh tạo stacking context che sidebar */
+  z-index: 1;           /* ✅ thấp hơn sidebar */
+  overflow: visible;
+}
