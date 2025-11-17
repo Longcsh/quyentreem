@@ -1,0 +1,95 @@
+<header class="site-header">
+  <div class="container">
+    <div class="topbar">
+      <div class="banner-slider">
+        <div class="slide fade" style="background-image: url('assets/3.png');"></div>
+        <div class="slide fade" style="background-image: url('assets/2.png');"></div>
+
+        <!-- Nút điều hướng -->
+        <a class="banner-prev" onclick="plusSlides(-1)">❮</a>
+        <a class="banner-next" onclick="plusSlides(1)">❯</a>
+
+        <!-- Ô tìm kiếm -->
+          <form id="searchFormUser" class="search-bar" role="search" aria-label="Tìm kiếm">
+    <i class="fa fa-search"></i>
+    <input type="text" id="searchInputUser" placeholder="Tìm kiếm bài viết, chuyên mục..." aria-label="Tìm kiếm nội dung">
+    <button type="submit"><i class="fa fa-arrow-right"></i></button>
+  </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav">
+    <div class="nav-wrapper">
+      <ul class="nav-menu">
+        <li><a href="index.php">Trang chủ</a></li>
+
+        <li class="dropdown">
+          <a href="#">Giới thiệu</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.php?page=tamnhin">Tầm nhìn – Sứ mệnh</a></li>
+            <li><a href="index.php?page=lichsu">Lịch sử</a></li>
+            <li><a href="index.php?page=cocautochuc">Cơ cấu tổ chức</a></li>
+            <li><a href="index.php?page=chienluoc">Chiến lược hoạt động</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Tài liệu</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.php?page=quyentreem">Quyền trẻ em</a></li>
+            <li><a href="index.php?page=chongbaohanh">Chống bạo hành</a></li>
+            <li><a href="index.php?page=giaoducantoan">Giáo dục an toàn</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Chuyên Mục</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.php?page=tintucsukien">Tin tức – Sự kiện</a></li>
+            <li><a href="index.php?page=tiengnoitre">Tiếng nói của trẻ</a></li>
+            <li><a href="index.php?page=chiase">Chia sẻ từ cộng đồng</a></li>
+            <li><a href="index.php?page=kienthuc">Kiến thức – Kĩ năng</a></li>
+            <li><a href="index.php?page=sangkien">Sáng kiến cho trẻ</a></li>
+          </ul>
+        </li>
+
+        <li><a href="pages/dang_nhap.php">Ủng hộ</a></li>
+
+        <li class="dropdown">
+          <a href="#">Tư vấn</a>
+          <ul class="dropdown-menu">
+            <li><a href="pages/dang_nhap.php">Hỏi chuyên gia</a></li>
+            <li><a href="pages/dang_nhap.php">Trả lời của tôi</a></li>
+            <li><a href="pages/dang_nhap.php">Đặt lịch</a></li>
+            <li><a href="pages/dang_nhap.php">Lịch của tôi</a></li>
+          </ul>
+        </li>
+
+        <li><a href="index.php?page=lienhe">Liên hệ</a></li>
+        <li><a href="pages/dang_nhap.php">Đăng nhập</a></li>
+        <li><a href="pages/dang_ky.php">Đăng ký</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- 🎞️ SLIDER SCRIPT -->
+<script>
+let slideIndex = 0, slideTimer;
+function showSlides() {
+  clearTimeout(slideTimer);
+  const slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex - 1].style.display = "block";
+  slideTimer = setTimeout(showSlides, 5000);
+}
+function plusSlides(n) {
+  slideIndex += n - 1;
+  showSlides();
+}
+document.addEventListener("DOMContentLoaded", showSlides);
+</script>

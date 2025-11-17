@@ -1,0 +1,142 @@
+<header class="site-header">
+  <div class="container">
+    <div class="topbar">
+      <div class="banner-slider">
+
+        <!-- 🖼️ Slide banner -->
+        <div class="slide fade" style="background-image: url('assets/3.png');"></div>
+        <div class="slide fade" style="background-image: url('assets/2.png');"></div>
+
+        <!-- 🔘 Nút điều hướng -->
+        <a class="banner-prev" onclick="plusSlides(-1)">❮</a>
+        <a class="banner-next" onclick="plusSlides(1)">❯</a>
+
+        <!-- 🔍 Ô tìm kiếm -->
+        <form id="searchFormUser" class="search-bar" role="search" aria-label="Tìm kiếm">
+    <i class="fa fa-search"></i>
+    <input type="text" id="searchInputUser" placeholder="Tìm kiếm bài viết, chuyên mục..." aria-label="Tìm kiếm nội dung">
+    <button type="submit"><i class="fa fa-arrow-right"></i></button>
+  </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔽 THANH NAVIGATION -->
+  <nav class="site-nav">
+    <div class="nav-wrapper">
+      <ul class="nav-menu">
+        <li><a href="user.php">Trang chủ</a></li>
+
+        <li class="dropdown">
+          <a href="#">Giới thiệu</a>
+          <ul class="dropdown-menu">
+            <li><a href="user.php?page=tamnhin">Tầm nhìn – Sứ mệnh</a></li>
+            <li><a href="user.php?page=lichsu">Lịch sử</a></li>
+            <li><a href="user.php?page=cocautochuc">Cơ cấu tổ chức</a></li>
+            <li><a href="user.php?page=chienluoc">Chiến lược hoạt động</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Tài liệu</a>
+          <ul class="dropdown-menu">
+            <li><a href="user.php?page=quyentreem">Quyền trẻ em</a></li>
+            <li><a href="user.php?page=chongbaohanh">Chống bạo hành</a></li>
+            <li><a href="user.php?page=giaoducantoan">Giáo dục an toàn</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Chuyên Mục</a>
+          <ul class="dropdown-menu">
+            <li><a href="user.php?page=tintuc">Tin tức - Sự kiện</a></li>
+            <li><a href="user.php?page=tiengnoi">Tiếng nói của trẻ</a></li>
+            <li><a href="user.php?page=chiase">Chia sẻ từ cộng đồng</a></li>
+            <li><a href="user.php?page=kienthuc">Kiến thức - Kĩ năng</a></li>
+            <li><a href="user.php?page=sangkien">Sáng kiến cho trẻ</a></li>
+          </ul>
+        </li>
+
+        <li><a href="user.php?page=ungho">Ủng hộ</a></li>
+
+        <li class="dropdown">
+          <a href="#">Tư vấn</a>
+          <ul class="dropdown-menu">
+            <li><a href="user.php?page=hoichuyengia">Hỏi chuyên gia</a></li>
+            <li><a href="user.php?page=traloi">Trả lời của tôi</a></li>
+            <li><a href="user.php?page=datlich">Đặt lịch</a></li>
+            <li><a href="user.php?page=lich">Lịch của tôi</a></li>
+          </ul>
+        </li>
+
+        <li><a href="user.php?page=lienhe">Liên hệ</a></li>
+
+        <li class="dropdown">
+          <a href="#">Tài Khoản</a>
+          <ul class="dropdown-menu">
+            <li><a href="user.php?page=hoso">Hồ sơ cá nhân</a></li>
+            <li><a href="user.php?page=doimk">Đổi mật khẩu</a></li>
+            <li><a href="pages/dang_xuat.php">Đăng xuất</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- ==================== JS SLIDER + SEARCH ==================== -->
+<script>
+// 🎞️ Banner tự động chạy
+let slideIndex = 0;
+showSlides();
+
+function plusSlides(n) {
+  slideIndex += n - 1;
+  showSlides();
+}
+
+function showSlides() {
+  const slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // đổi ảnh mỗi 5 giây
+}
+
+// 🔍 Tìm kiếm thông minh
+document.getElementById('searchFormUser').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const keyword = document.getElementById('searchInputUser').value.trim().toLowerCase();
+  let page = '';
+
+  if (keyword.includes('trang chủ')) page = '';
+  else if (keyword.includes('tầm nhìn') || keyword.includes('sứ mệnh')) page = 'tamnhin';
+  else if (keyword.includes('lịch sử')) page = 'lichsu';
+  else if (keyword.includes('cơ cấu') || keyword.includes('tổ chức')) page = 'cocautochuc';
+  else if (keyword.includes('chiến lược')) page = 'chienluoc';
+  else if (keyword.includes('quyền') || keyword.includes('trẻ em')) page = 'quyentreem';
+  else if (keyword.includes('bạo hành') || keyword.includes('chống')) page = 'chongbaohanh';
+  else if (keyword.includes('giáo dục') || keyword.includes('an toàn')) page = 'giaoducantoan';
+  else if (keyword.includes('tin tức') || keyword.includes('sự kiện')) page = 'tintuc';
+  else if (keyword.includes('tiếng nói')) page = 'tiengnoi';
+  else if (keyword.includes('chia sẻ') || keyword.includes('cộng đồng')) page = 'chiase';
+  else if (keyword.includes('kiến thức') || keyword.includes('kĩ năng') || keyword.includes('kỹ năng')) page = 'kienthuc';
+  else if (keyword.includes('sáng kiến')) page = 'sangkien';
+  else if (keyword.includes('ủng hộ') || keyword.includes('donate')) page = 'ungho';
+  else if (keyword.includes('tư vấn') || keyword.includes('hỏi chuyên gia')) page = 'hoichuyengia';
+  else if (keyword.includes('trả lời')) page = 'traloi';
+  else if (keyword.includes('đặt lịch')) page = 'datlich';
+  else if (keyword.includes('lịch của tôi')) page = 'lich';
+  else if (keyword.includes('liên hệ')) page = 'lienhe';
+  else if (keyword.includes('tài khoản') || keyword.includes('hồ sơ')) page = 'hoso';
+  else {
+    alert('Không tìm thấy nội dung phù hợp.');
+    return;
+  }
+
+  const base = '/php/bvte/user.php';
+  window.location.href = page ? `${base}?page=${page}` : base;
+});
+</script>
+
